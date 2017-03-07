@@ -28,7 +28,20 @@
     </head>
     <body ng-app="toDoList"> <!-- Note, this is important, the main module name is the app name -->
     <!-- The ui-view directive is provided by ui-router and is where our main view for our route will be injected -->
-        <ui-view></ui-view>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>To-Do List</h1>
+                <p>Your guide to organizing your life</p>
+            </div>
+
+            <ui-view></ui-view>
+        </div>
+
+        <script src="toDoList/toDoList.module.js"></script>
+
+        <script src="toDoList/features/listToDos/listToDos.module.js"></script>
+        <script src="toDoList/features/listToDos/listToDos.controller.js"></script>
+        <script src="toDoList/features/listToDos/listToDos.route.js"></script>
 
         <script src="toDoList/features/completedToDos/completedToDos.module.js"></script>
         <script src="toDoList/features/completedToDos/completedToDos.controller.js"></script>
@@ -38,8 +51,5 @@
         <script src="toDoList/features/createToDo/createToDo.controller.js"></script>
         <script src="toDoList/features/createToDo/createToDo.route.js"></script>
 
-        <script src="toDoList/features/listToDos/listToDos.module.js"></script>
-        <script src="toDoList/features/listToDos/listToDos.controller.js"></script>
-        <script src="toDoList/features/listToDos/listToDos.route.js"></script>
     </body>
 </html>

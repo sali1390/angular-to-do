@@ -5,10 +5,10 @@ angular
 function ListCtrl($http) {
     var vm = this;
 
-    $http({
-        method: 'GET',
-        url: ,
-    }).then(function(response) {
-
-    })
+    //$http({
+    //    method: 'GET',
+    //    url: ,
+    //}).then(function(response) {
+    //
+    //})
 }

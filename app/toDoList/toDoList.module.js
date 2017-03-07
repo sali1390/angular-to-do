@@ -7,7 +7,7 @@ angular
         //Features aka States
         'toDoList.listToDos',
         'toDoList.createToDo',
-        'toDoList.completedToDo'
+        'toDoList.completedToDos'
     ])
     .config(appConfig);
 

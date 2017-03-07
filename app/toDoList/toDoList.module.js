@@ -4,8 +4,10 @@ angular
         //Global Dependencies
         'ui.router',
 
-        //Features/States
-
+        //Features aka States
+        'toDoList.listToDos',
+        'toDoList.createToDo',
+        'toDoList.completedToDo'
     ])
     .config(appConfig);
 

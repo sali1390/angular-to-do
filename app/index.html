@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <base href="/" />
+        <meta charset="utf-8">
+        <title>AngularJS - To Do List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="fragment" content="!">
+
+        <!--
+           Here we include the Angular JS library JS and the Angular UI-Router library.
+           Angular UI-Router is not a built in angular library but makes routing much easier.
+           In Angular 2, Angular adopts this concept of routing and it is included.
+        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+        <!--<link rel="stylesheet" href="toDoList/layout/assets/styles/layout.css">-->
+    </head>
+    <body ng-app="toDoList"> <!-- Note, this is important, the main module name is the app name -->
+    <!-- The ui-view directive is provided by ui-router and is where our main view for our route will be injected -->
+        <ui-view></ui-view>
+
+        <script src="toDoList/features/completedToDos/completedToDos.module.js"></script>
+        <script src="toDoList/features/completedToDos/completedToDos.controller.js"></script>
+        <script src="toDoList/features/completedToDos/completedToDos.route.js"></script>
+
+        <script src="toDoList/features/createToDo/createToDo.module.js"></script>
+        <script src="toDoList/features/createToDo/createToDo.controller.js"></script>
+        <script src="toDoList/features/createToDo/createToDo.route.js"></script>
+
+        <script src="toDoList/features/listToDos/listToDos.module.js"></script>
+        <script src="toDoList/features/listToDos/listToDos.controller.js"></script>
+        <script src="toDoList/features/listToDos/listToDos.route.js"></script>
+    </body>
+</html>

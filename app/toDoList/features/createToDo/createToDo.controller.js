@@ -32,4 +32,14 @@ function CreateCtrl($http) {
         resetView();
     }
 
+    vm.updateToDo = function(id) {
+
+        $http({
+            method: 'PUT',
+            url: '/api/todos',
+            data: vm.todos
+        }).then(function(response) {
+
+        });
+    }
 };

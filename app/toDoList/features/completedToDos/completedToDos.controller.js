@@ -5,10 +5,4 @@ angular
 function CompletedCtrl($http) {
     var vm = this;
 
-    //$http({
-    //    method: 'GET',
-    //    url: ,
-    //}).then(function(response) {
-    //
-    //})
 }

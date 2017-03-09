@@ -3,3 +3,9 @@
     <li role="presentation"><a ui-sref="createToDo">Create</a></li>
     <li role="presentation" class="active"><a ui-sref="completedToDos">Completed</a></li>
 </ul>
+
+<ul>
+    <li ng-repeat="todo in ListVM.todos" ng-if="todo.status == true">
+        <input type="checkbox" name="complete" ng-click="CompletedVM.updatedToDo()"> {{todo.todo}}
+    </li>
+</ul>

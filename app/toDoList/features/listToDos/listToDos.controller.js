@@ -5,13 +5,24 @@ angular
 function ListCtrl($stateParams, $http) {
     var vm = this;
 
+    vm.todos = [];
+
     $http({
         method: 'GET',
         url: '/api/todos',
     }).then(function(response) {
-        vm.todos = response;
+        //for (i = 0; i < response.data; i++){
+        //    vm.todos.push(response.data[i].todo)
+        //
+        //    console.log(vm.todos)
+        //}
 
-        //$stateParams.todol = response.data;
-        response.data.forEach
-    })
+        response.data.forEach(function(todo){
+            vm.todos.push(todo);
+        })
+
+        console.log(vm.todos)
+    });
+
+
 }

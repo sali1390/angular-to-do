@@ -26,20 +26,20 @@ require("./api/get-todos.js")(app);
 require("./api/post-todos.js")(app);
 //require("./api/put-items.js")(app);
 
-var exampleToDo = new ToDo({
-    todo: "Wash Dishes",
-    status: false,
-    completeBy: "2017-03-18T16:00:00Z"
-});
-
-exampleToDo.save(function(error, doc) {
-    if (error) {
-        console.log(error);
-    }
-    else {
-        console.log(doc)
-    }
-});
+//var exampleToDo = new ToDo({
+//    todo: "Wash Dishes",
+//    status: false,
+//    completeBy: "2017-03-18T16:00:00Z"
+//});
+//
+//exampleToDo.save(function(error, doc) {
+//    if (error) {
+//        console.log(error);
+//    }
+//    else {
+//        console.log(doc)
+//    }
+//});
 
 app.listen(port, function(){
     console.log("Listening on port: " + port);

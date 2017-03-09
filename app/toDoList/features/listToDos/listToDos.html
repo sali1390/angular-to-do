@@ -5,7 +5,7 @@
 </ul>
 
 <ul>
-    <li ng-repeat="todo in ListVM.todos">
-
+    <li ng-repeat="todo in ListVM.todos" ng-if="todo.status !== true">
+        <input type="checkbox" name="complete"> {{todo.todo}}
     </li>
 </ul>

@@ -10,7 +10,8 @@ var ToDoSchema = new Schema({
         type: String
     },
     completeBy: {
-        type: String
+        type: Date,
+        default: Date.now
     }
 });
 

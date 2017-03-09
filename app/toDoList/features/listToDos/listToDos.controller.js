@@ -2,13 +2,15 @@ angular
     .module('toDoList.listToDos')
     .controller('ListCtrl', ListCtrl);
 
-function ListCtrl($http) {
+function ListCtrl($stateParams, $http) {
     var vm = this;
 
-    //$http({
-    //    method: 'GET',
-    //    url: ,
-    //}).then(function(response) {
-    //
-    //})
+    $http({
+        method: 'GET',
+        url: '/api/todos',
+    }).then(function(response) {
+        vm.todos = response
+
+        console.log(vm.todos)
+    })
 }

@@ -19,6 +19,16 @@ db.once("open", function() {
    console.log("Mongoose Connection Successful.")
 });
 
+app.get('/api/todos', function(req,res) {
+    ToDo.find({}, function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    })
+})
+
 var exampleToDo = new ToDo({
     todo: "Wash Dishes",
     status: "incomplete",

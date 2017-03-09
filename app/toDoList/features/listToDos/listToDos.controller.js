@@ -9,8 +9,9 @@ function ListCtrl($stateParams, $http) {
         method: 'GET',
         url: '/api/todos',
     }).then(function(response) {
-        vm.todos = response
+        vm.todos = response;
 
-        console.log(vm.todos)
+        //$stateParams.todol = response.data;
+        response.data.forEach
     })
 }

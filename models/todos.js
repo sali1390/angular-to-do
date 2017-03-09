@@ -7,7 +7,8 @@ var ToDoSchema = new Schema({
         type: String
     },
     status: {
-        type: String
+        type: Boolean,
+        default: false
     },
     completeBy: {
         type: Date,

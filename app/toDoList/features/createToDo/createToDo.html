@@ -3,3 +3,10 @@
     <li role="presentation" class="active"><a ui-sref="createToDo">Create</a></li>
     <li role="presentation"><a ui-sref="completedToDos">Completed</a></li>
 </ul>
+
+<form>
+    To-Do Item: <input type="text" class="form-control" name="todo" ng-model="CreateVM.todos.todo">
+    Password: <input type="date" class="form-control" name="completeBy" ng-model="CreateVM.todos.completeBy">
+
+    <button class="btn btn-default" type="submit" ng-click="CreateVM.addToDo(CreateVM.todos.todo, CreateVM.todos.completeBy)">Submit</button>
+</form>

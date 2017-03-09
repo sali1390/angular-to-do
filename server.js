@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 3000;
+var PORT = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var ToDo = require("./models/todos.js");
 var bodyParser = require('body-parser');
@@ -11,7 +11,7 @@ mongoose.Promise = Promise;
 
 app.use(express.static(__dirname + "/app"));
 
-mongoose.connect("mongodb://localhost/angularToDo");
+mongoose.connect("mongodb://heroku_1n8kzbf8:sfhbdi538sgfu5rsvggdg1gs52@ds127190.mlab.com:27190/heroku_1n8kzbf8");
 var db = mongoose.connection
 
 db.on("error", function(error) {
@@ -41,6 +41,6 @@ require("./api/post-todos.js")(app);
 //    }
 //});
 
-app.listen(port, function(){
-    console.log("Listening on port: " + port);
+app.listen(PORT, function(){
+    console.log("Listening on port: " + PORT);
 });
